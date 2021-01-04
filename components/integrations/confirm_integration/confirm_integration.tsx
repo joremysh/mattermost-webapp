@@ -12,6 +12,7 @@ import CopyText from 'components/copy_text';
 import BackstageHeader from 'components/backstage/components/backstage_header.jsx';
 import {getSiteURL} from 'utils/url';
 import FormattedMarkdownMessage from 'components/formatted_markdown_message';
+import { Props } from 'components/timestamp/semantic_time';
 
 export default class ConfirmIntegration extends React.PureComponent {
     static get propTypes() {
@@ -26,7 +27,7 @@ export default class ConfirmIntegration extends React.PureComponent {
         };
     }
 
-    constructor(props) {
+    constructor(props: Props) {
         super(props);
         this.state = {
             type: (new URLSearchParams(this.props.location.search)).get('type'),
